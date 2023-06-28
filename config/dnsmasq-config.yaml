@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dnsmasq-config
+  namespace: pihole
+data:
+  01-pihole.conf: |
+    addn-hosts=/etc/pihole/gravity.list
+    conf-dir=/etc/dnsmasq.d
